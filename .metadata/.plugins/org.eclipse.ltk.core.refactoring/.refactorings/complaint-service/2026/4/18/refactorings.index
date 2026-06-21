@@ -1,0 +1,6 @@
+1777278662734	Encapsulate field 'createdAt'
+1777278668959	Encapsulate field 'updatedAt'
+1777279351876	Delete element
+1777280232729	Rename package 'com.complaint.config'
+1777310783612	Encapsulate field 'message'
+1777310790609	Encapsulate field 'userId'

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="admin-service" project="admin-service" tests="33" started="33" failures="1" errors="1" ignored="1">
+  <testsuite name="com.admin.repository.AdminRepositoryTest" time="0.412" displayname="AdminRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.admin.repository.AdminRepositoryTest]">
+    <testcase name="testSaveAndFind" classname="com.admin.repository.AdminRepositoryTest" time="0.412" displayname="testSaveAndFind()" uniqueid="[engine:junit-jupiter]/[class:com.admin.repository.AdminRepositoryTest]/[method:testSaveAndFind()]">
+      <error>org.springframework.dao.InvalidDataAccessResourceUsageException: error performing isolated work [Table "ADMIN_SEQ" not found (this database is empty); SQL statement:
+select next_val as id_val from admin_seq for update [42104-224]] [n/a]; SQL [n/a]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:277)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy119.save(Unknown Source)
+	at com.admin.repository.AdminRepositoryTest.testSaveAndFind(AdminRepositoryTest.java:27)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.hibernate.exception.SQLGrammarException: error performing isolated work [Table "ADMIN_SEQ" not found (this database is empty); SQL statement:
+select next_val as id_val from admin_seq for update [42104-224]] [n/a]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:66)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:92)
+	at org.hibernate.id.enhanced.TableStructure$1.getNextValue(TableStructure.java:135)
+	at org.hibernate.id.enhanced.PooledOptimizer.generate(PooledOptimizer.java:76)
+	at org.hibernate.id.enhanced.SequenceStyleGenerator.generate(SequenceStyleGenerator.java:555)
+	at org.hibernate.id.IdentifierGenerator.generate(IdentifierGenerator.java:147)
+	at org.hibernate.event.internal.AbstractSaveEventListener.generateId(AbstractSaveEventListener.java:153)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:124)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:754)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:738)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:319)
+	at jdk.proxy2/jdk.proxy2.$Proxy114.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:618)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	... 11 more
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ADMIN_SEQ" not found (this database is empty); SQL statement:
+select next_val as id_val from admin_seq for update [42104-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8051)
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8035)
+	at org.h2.command.Parser.readTableOrView(Parser.java:8024)
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1788)
+	at org.h2.command.Parser.readTableReference(Parser.java:2268)
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2718)
+	at org.h2.command.Parser.parseSelect(Parser.java:2824)
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2708)
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2564)
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2543)
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2536)
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2529)
+	at org.h2.command.Parser.parseQuery(Parser.java:2498)
+	at org.h2.command.Parser.parsePrepared(Parser.java:627)
+	at org.h2.command.Parser.parse(Parser.java:592)
+	at org.h2.command.Parser.parse(Parser.java:564)
+	at org.h2.command.Parser.prepareCommand(Parser.java:483)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcPreparedStatement.&lt;init&gt;(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:316)
+	at org.hibernate.id.enhanced.TableStructure.prepareStatement(TableStructure.java:215)
+	at org.hibernate.id.enhanced.TableStructure$1$1.execute(TableStructure.java:142)
+	at org.hibernate.id.enhanced.TableStructure$1$1.execute(TableStructure.java:136)
+	at org.hibernate.jdbc.WorkExecutor.executeReturningWork(WorkExecutor.java:58)
+	at org.hibernate.jdbc.AbstractReturningWork.accept(AbstractReturningWork.java:34)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:70)
+	... 53 more
+
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="com.admin.controller.AdminControllerTest" time="0.223" displayname="AdminControllerTest" uniqueid="[engine:junit-jupiter]/[class:com.admin.controller.AdminControllerTest]">
+    <testcase name="testAssignComplaintEndpoint" classname="com.admin.controller.AdminControllerTest" time="0.188" displayname="testAssignComplaintEndpoint()" uniqueid="[engine:junit-jupiter]/[class:com.admin.controller.AdminControllerTest]/[method:testAssignComplaintEndpoint()]"/>
+    <testcase name="testUpdatePriority" classname="com.admin.controller.AdminControllerTest" time="0.005" displayname="testUpdatePriority()" uniqueid="[engine:junit-jupiter]/[class:com.admin.controller.AdminControllerTest]/[method:testUpdatePriority()]"/>
+    <testcase name="testCreateAdmin" classname="com.admin.controller.AdminControllerTest" time="0.003" displayname="testCreateAdmin()" uniqueid="[engine:junit-jupiter]/[class:com.admin.controller.AdminControllerTest]/[method:testCreateAdmin()]"/>
+    <testcase name="testCreateActionEndpoint" classname="com.admin.controller.AdminControllerTest" time="0.002" displayname="testCreateActionEndpoint()" uniqueid="[engine:junit-jupiter]/[class:com.admin.controller.AdminControllerTest]/[method:testCreateActionEndpoint()]"/>
+    <testcase name="testResolveEndpoint" classname="com.admin.controller.AdminControllerTest" time="0.002" displayname="testResolveEndpoint()" uniqueid="[engine:junit-jupiter]/[class:com.admin.controller.AdminControllerTest]/[method:testResolveEndpoint()]"/>
+    <testcase name="testUpdateStatus" classname="com.admin.controller.AdminControllerTest" time="0.006" displayname="testUpdateStatus()" uniqueid="[engine:junit-jupiter]/[class:com.admin.controller.AdminControllerTest]/[method:testUpdateStatus()]">
+      <failure>
+        <expected>INPROGRESS</expected>
+        <actual>ASSIGNED</actual>
+        org.opentest4j.AssertionFailedError: expected: &lt;INPROGRESS&gt; but was: &lt;ASSIGNED&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at com.admin.controller.AdminControllerTest.testUpdateStatus(AdminControllerTest.java:107)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+
+      </failure>
+    </testcase>
+    <testcase name="testCreateAdminEndpoint" classname="com.admin.controller.AdminControllerTest" time="0.001" displayname="testCreateAdminEndpoint()" uniqueid="[engine:junit-jupiter]/[class:com.admin.controller.AdminControllerTest]/[method:testCreateAdminEndpoint()]"/>
+    <testcase name="testResolve" classname="com.admin.controller.AdminControllerTest" time="0.001" displayname="testResolve()" uniqueid="[engine:junit-jupiter]/[class:com.admin.controller.AdminControllerTest]/[method:testResolve()]"/>
+    <testcase name="testGetAll" classname="com.admin.controller.AdminControllerTest" time="0.002" displayname="testGetAll()" uniqueid="[engine:junit-jupiter]/[class:com.admin.controller.AdminControllerTest]/[method:testGetAll()]"/>
+    <testcase name="testGetAllActions" classname="com.admin.controller.AdminControllerTest" time="0.002" displayname="testGetAllActions()" uniqueid="[engine:junit-jupiter]/[class:com.admin.controller.AdminControllerTest]/[method:testGetAllActions()]"/>
+    <testcase name="testAssignComplaintPathVariable" classname="com.admin.controller.AdminControllerTest" time="0.002" displayname="testAssignComplaintPathVariable()" uniqueid="[engine:junit-jupiter]/[class:com.admin.controller.AdminControllerTest]/[method:testAssignComplaintPathVariable()]"/>
+    <testcase name="testCreateAction" classname="com.admin.controller.AdminControllerTest" time="0.002" displayname="testCreateAction()" uniqueid="[engine:junit-jupiter]/[class:com.admin.controller.AdminControllerTest]/[method:testCreateAction()]"/>
+  </testsuite>
+  <testsuite name="com.admin.AdminServiceApplicationTests" time="0.0" displayname="AdminServiceApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.admin.AdminServiceApplicationTests]">
+    <testcase name="contextLoads" classname="com.admin.AdminServiceApplicationTests" time="0.0" ignored="true" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.admin.AdminServiceApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+  <testsuite name="com.admin.service.AdminServiceTest" time="0.222" displayname="AdminServiceTest" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]">
+    <testcase name="testUpdatePriorityNotFound" classname="com.admin.service.AdminServiceTest" time="0.19" displayname="testUpdatePriorityNotFound()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testUpdatePriorityNotFound()]"/>
+    <testcase name="testSaveAdminEmptyEmail" classname="com.admin.service.AdminServiceTest" time="0.001" displayname="testSaveAdminEmptyEmail()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testSaveAdminEmptyEmail()]"/>
+    <testcase name="testUpdatePriority" classname="com.admin.service.AdminServiceTest" time="0.004" displayname="testUpdatePriority()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testUpdatePriority()]"/>
+    <testcase name="testUpdateStatusSuccess" classname="com.admin.service.AdminServiceTest" time="0.002" displayname="testUpdateStatusSuccess()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testUpdateStatusSuccess()]"/>
+    <testcase name="testResolveSuccess" classname="com.admin.service.AdminServiceTest" time="0.002" displayname="testResolveSuccess()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testResolveSuccess()]"/>
+    <testcase name="testSaveAdmin_EmailEmpty" classname="com.admin.service.AdminServiceTest" time="0.002" displayname="testSaveAdmin_EmailEmpty()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testSaveAdmin_EmailEmpty()]"/>
+    <testcase name="testAssignComplaint" classname="com.admin.service.AdminServiceTest" time="0.001" displayname="testAssignComplaint()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testAssignComplaint()]"/>
+    <testcase name="testUpdateStatusNotFound" classname="com.admin.service.AdminServiceTest" time="0.001" displayname="testUpdateStatusNotFound()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testUpdateStatusNotFound()]"/>
+    <testcase name="testResolveNotFound" classname="com.admin.service.AdminServiceTest" time="0.001" displayname="testResolveNotFound()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testResolveNotFound()]"/>
+    <testcase name="testAssignComplaint_StatusEmpty" classname="com.admin.service.AdminServiceTest" time="0.001" displayname="testAssignComplaint_StatusEmpty()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testAssignComplaint_StatusEmpty()]"/>
+    <testcase name="testUpdateStatus_NotFound" classname="com.admin.service.AdminServiceTest" time="0.001" displayname="testUpdateStatus_NotFound()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testUpdateStatus_NotFound()]"/>
+    <testcase name="testUpdateStatus" classname="com.admin.service.AdminServiceTest" time="0.002" displayname="testUpdateStatus()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testUpdateStatus()]"/>
+    <testcase name="testAssignComplaintEmptyStatus" classname="com.admin.service.AdminServiceTest" time="0.001" displayname="testAssignComplaintEmptyStatus()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testAssignComplaintEmptyStatus()]"/>
+    <testcase name="testResolve" classname="com.admin.service.AdminServiceTest" time="0.001" displayname="testResolve()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testResolve()]"/>
+    <testcase name="testSaveAdminRolePrefix" classname="com.admin.service.AdminServiceTest" time="0.001" displayname="testSaveAdminRolePrefix()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testSaveAdminRolePrefix()]"/>
+    <testcase name="testResolve_NotFound" classname="com.admin.service.AdminServiceTest" time="0.001" displayname="testResolve_NotFound()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testResolve_NotFound()]"/>
+    <testcase name="testSaveAdmin" classname="com.admin.service.AdminServiceTest" time="0.001" displayname="testSaveAdmin()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testSaveAdmin()]"/>
+    <testcase name="testUpdatePriority_NotFound" classname="com.admin.service.AdminServiceTest" time="0.002" displayname="testUpdatePriority_NotFound()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testUpdatePriority_NotFound()]"/>
+    <testcase name="testGetAllActions" classname="com.admin.service.AdminServiceTest" time="0.001" displayname="testGetAllActions()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testGetAllActions()]"/>
+  </testsuite>
+</testrun>

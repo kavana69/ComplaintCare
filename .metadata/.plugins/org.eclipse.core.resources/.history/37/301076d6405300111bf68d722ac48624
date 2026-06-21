@@ -1,0 +1,126 @@
+package com.user.controller;
+
+import java.util.List;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import com.user.client.NotificationClient;
+import com.user.dto.NotificationDTO;
+import com.user.dto.OtpRequestDTO;
+import com.user.dto.OtpVerifyDTO;
+import com.user.dto.RegisterVerifyDTO;
+import com.user.dto.ResetPasswordDTO;
+import com.user.dto.UserDTO;
+import com.user.entity.User;
+import com.user.service.UserService;
+import com.user.client.AuthClient;
+
+@RestController
+@RequestMapping("/users")
+public class UserController {
+
+	private final UserService service;
+	private final NotificationClient notificationClient;
+	private final AuthClient authClient;
+
+	public UserController(UserService service,
+            NotificationClient notificationClient,
+            AuthClient authClient) {
+
+this.service = service;
+this.notificationClient = notificationClient;
+this.authClient = authClient;
+}
+
+    // CREATE USER
+    @PostMapping
+    public User create(@RequestBody UserDTO dto) {
+        return service.createUser(dto);
+    }
+
+    // GET ALL USERS
+    @GetMapping
+    public List<User> getAll() {
+        return service.getAllUsers();
+    }
+
+    // GET USER BY ID
+    @GetMapping("/{id}")
+    public User getById(@PathVariable Long id) {
+        return service.getUserById(id);
+    }
+    @GetMapping("/email/{email}")
+    public User getByEmail(@PathVariable String email) {
+        return service.getUserByEmail(email);
+    }
+    @GetMapping("/test")
+    public String test() {
+        return "User Service Working ";
+    }
+
+    // DELETE USER
+    @DeleteMapping("/{id}")
+    public String delete(@PathVariable Long id) {
+        return service.deleteUser(id);
+    }
+    @PostMapping("/send-otp")
+    public String sendOtp(@RequestBody OtpRequestDTO dto) {
+
+        try {
+            String otp = service.generateOtp(dto.getEmail());
+            NotificationDTO notification = new NotificationDTO();
+            notification.setEmail(dto.getEmail());
+            notification.setMessage(
+                "Your OTP is: " + otp
+            );
+            notificationClient.sendNotification(notification);
+            return "OTP sent successfully";
+        } catch (Exception e) {
+            e.printStackTrace();
+            return e.getMessage();
+        }
+    }
+    @PostMapping("/verify-register")
+    public User verifyAndRegister(
+            @RequestBody RegisterVerifyDTO dto) {
+
+        boolean valid = service.verifyOtp(
+                dto.getEmail(),
+                dto.getOtp()
+        );
+
+        if (!valid) {
+            throw new IllegalArgumentException("Invalid OTP");
+        }
+
+        UserDTO userDTO = new UserDTO();
+
+        userDTO.setName(dto.getName());
+        userDTO.setEmail(dto.getEmail());
+        userDTO.setPassword(dto.getPassword());
+        userDTO.setRole("USER");
+
+        //User user = service.createUser(userDTO);
+
+        authClient.register(userDTO);
+        
+
+        return service.createUser(userDTO);;
+    }
+    @PostMapping("/forgot-password/send-otp")
+    public ResponseEntity<String> sendForgotOtp(@RequestParam String email) {
+
+        return ResponseEntity.ok(service.sendForgotPasswordOtp(email));
+    }
+    @PostMapping("/forgot-password/verify-otp")
+    public ResponseEntity<String> verifyForgotOtp(@RequestBody OtpVerifyDTO dto) {
+
+        return ResponseEntity.ok(service.verifyForgotOtp(dto));
+    }
+    @PutMapping("/forgot-password/reset")
+    public ResponseEntity<String> resetPassword(@RequestBody ResetPasswordDTO dto) {
+
+        return ResponseEntity.ok(service.resetPassword(dto));
+    }
+}

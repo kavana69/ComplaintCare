@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="admin-service" project="admin-service" tests="13" started="13" failures="0" errors="7" ignored="1">
+  <testsuite name="com.admin.repository.AdminRepositoryTest" time="0.409" displayname="AdminRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.admin.repository.AdminRepositoryTest]">
+    <testcase name="testSaveAndFind" classname="com.admin.repository.AdminRepositoryTest" time="0.409" displayname="testSaveAndFind()" uniqueid="[engine:junit-jupiter]/[class:com.admin.repository.AdminRepositoryTest]/[method:testSaveAndFind()]">
+      <error>org.springframework.dao.InvalidDataAccessResourceUsageException: could not prepare statement [Table "ADMIN" not found (this database is empty); SQL statement:
+insert into admin (email,name,role) values (?,?,?) [42104-224]] [insert into admin (email,name,role) values (?,?,?)]; SQL [insert into admin (email,name,role) values (?,?,?)]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:277)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy121.save(Unknown Source)
+	at com.admin.repository.AdminRepositoryTest.testSaveAndFind(AdminRepositoryTest.java:28)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.hibernate.exception.SQLGrammarException: could not prepare statement [Table "ADMIN" not found (this database is empty); SQL statement:
+insert into admin (email,name,role) values (?,?,?) [42104-224]] [insert into admin (email,name,role) values (?,?,?)]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:66)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.internal.MutationStatementPreparerImpl$StatementPreparationTemplate.prepareStatement(MutationStatementPreparerImpl.java:117)
+	at org.hibernate.engine.jdbc.internal.MutationStatementPreparerImpl.prepareStatement(MutationStatementPreparerImpl.java:63)
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.prepareStatement(GetGeneratedKeysDelegate.java:86)
+	at org.hibernate.engine.jdbc.mutation.internal.ModelMutationHelper.lambda$identityPreparation$1(ModelMutationHelper.java:132)
+	at org.hibernate.engine.jdbc.mutation.internal.PreparedStatementDetailsStandard.resolveStatement(PreparedStatementDetailsStandard.java:87)
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performInsert(GetGeneratedKeysDelegate.java:104)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorPostInsertSingleTable.execute(MutationExecutorPostInsertSingleTable.java:100)
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.doStaticInserts(InsertCoordinator.java:175)
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.coordinateInsert(InsertCoordinator.java:113)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2868)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:670)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:272)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:386)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:300)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:219)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:134)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:754)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:738)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:319)
+	at jdk.proxy2/jdk.proxy2.$Proxy116.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:618)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	... 11 more
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ADMIN" not found (this database is empty); SQL statement:
+insert into admin (email,name,role) values (?,?,?) [42104-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8051)
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8035)
+	at org.h2.command.Parser.readTableOrView(Parser.java:8024)
+	at org.h2.command.Parser.readTableOrView(Parser.java:7990)
+	at org.h2.command.Parser.parseInsert(Parser.java:1540)
+	at org.h2.command.Parser.parsePrepared(Parser.java:719)
+	at org.h2.command.Parser.parse(Parser.java:592)
+	at org.h2.command.Parser.parse(Parser.java:564)
+	at org.h2.command.Parser.prepareCommand(Parser.java:483)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcPreparedStatement.&lt;init&gt;(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:1094)
+	at org.hibernate.engine.jdbc.internal.MutationStatementPreparerImpl$2.doPrepare(MutationStatementPreparerImpl.java:61)
+	at org.hibernate.engine.jdbc.internal.MutationStatementPreparerImpl$StatementPreparationTemplate.prepareStatement(MutationStatementPreparerImpl.java:106)
+	... 65 more
+
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="com.admin.controller.AdminControllerTest" time="0.247" displayname="AdminControllerTest" uniqueid="[engine:junit-jupiter]/[class:com.admin.controller.AdminControllerTest]">
+    <testcase name="testUpdatePriority" classname="com.admin.controller.AdminControllerTest" time="0.184" displayname="testUpdatePriority()" uniqueid="[engine:junit-jupiter]/[class:com.admin.controller.AdminControllerTest]/[method:testUpdatePriority()]"/>
+    <testcase name="testAssignComplaint" classname="com.admin.controller.AdminControllerTest" time="0.047" displayname="testAssignComplaint()" uniqueid="[engine:junit-jupiter]/[class:com.admin.controller.AdminControllerTest]/[method:testAssignComplaint()]"/>
+    <testcase name="testUpdateStatus" classname="com.admin.controller.AdminControllerTest" time="0.004" displayname="testUpdateStatus()" uniqueid="[engine:junit-jupiter]/[class:com.admin.controller.AdminControllerTest]/[method:testUpdateStatus()]"/>
+    <testcase name="testResolve" classname="com.admin.controller.AdminControllerTest" time="0.004" displayname="testResolve()" uniqueid="[engine:junit-jupiter]/[class:com.admin.controller.AdminControllerTest]/[method:testResolve()]"/>
+    <testcase name="testGetAllActions" classname="com.admin.controller.AdminControllerTest" time="0.006" displayname="testGetAllActions()" uniqueid="[engine:junit-jupiter]/[class:com.admin.controller.AdminControllerTest]/[method:testGetAllActions()]"/>
+  </testsuite>
+  <testsuite name="com.admin.AdminServiceApplicationTests" time="0.0" displayname="AdminServiceApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.admin.AdminServiceApplicationTests]">
+    <testcase name="contextLoads" classname="com.admin.AdminServiceApplicationTests" time="0.0" ignored="true" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.admin.AdminServiceApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+  <testsuite name="com.admin.service.AdminServiceTest" time="0.128" displayname="AdminServiceTest" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]">
+    <testcase name="testNotFound" classname="com.admin.service.AdminServiceTest" time="0.109" displayname="testNotFound()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testNotFound()]">
+      <error>java.lang.NullPointerException: Cannot invoke "com.admin.repository.AdminActionRepository.findById(Object)" because "this.actionRepo" is null
+	at com.admin.service.AdminServiceTest.testNotFound(AdminServiceTest.java:97)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+</error>
+    </testcase>
+    <testcase name="testUpdatePriority" classname="com.admin.service.AdminServiceTest" time="0.001" displayname="testUpdatePriority()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testUpdatePriority()]">
+      <error>java.lang.NullPointerException: Cannot invoke "com.admin.repository.AdminActionRepository.findById(Object)" because "this.actionRepo" is null
+	at com.admin.service.AdminServiceTest.testUpdatePriority(AdminServiceTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+</error>
+    </testcase>
+    <testcase name="testAssignComplaint" classname="com.admin.service.AdminServiceTest" time="0.001" displayname="testAssignComplaint()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testAssignComplaint()]">
+      <error>java.lang.NullPointerException: Cannot invoke "com.admin.repository.AdminActionRepository.save(Object)" because "this.actionRepo" is null
+	at com.admin.service.AdminServiceTest.testAssignComplaint(AdminServiceTest.java:40)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+</error>
+    </testcase>
+    <testcase name="testUpdateStatus" classname="com.admin.service.AdminServiceTest" time="0.011" displayname="testUpdateStatus()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testUpdateStatus()]">
+      <error>org.mockito.exceptions.misusing.InvalidUseOfMatchersException: 
+Misplaced or misused argument matcher detected here:
+
+-&gt; at com.admin.service.AdminServiceTest.testAssignComplaint(AdminServiceTest.java:40)
+
+You cannot use argument matchers outside of verification or stubbing.
+Examples of correct usage of argument matchers:
+    when(mock.get(anyInt())).thenReturn(null);
+    doThrow(new RuntimeException()).when(mock).someVoidMethod(any());
+    verify(mock).someMethod(contains("foo"))
+
+This message may appear after an NullPointerException if the last matcher is returning an object 
+like any() but the stubbed method signature expect a primitive argument, in this case,
+use primitive alternatives.
+    when(mock.get(any())); // bad use, will raise NPE
+    when(mock.get(anyInt())); // correct usage use
+
+Also, this error might show up because you use argument matchers with methods that cannot be mocked.
+Following methods *cannot* be stubbed/verified: final/private/equals()/hashCode().
+Mocking methods declared on non-public parent classes is not supported.
+
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:159)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.util.Set.forEach(java.util.function.Consumer)" because the return value of "org.junit.jupiter.api.extension.ExtensionContext$Store.remove(Object, java.lang.Class)" is null
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:190)
+		... 2 more
+
+</error>
+    </testcase>
+    <testcase name="testResolve" classname="com.admin.service.AdminServiceTest" time="0.002" displayname="testResolve()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testResolve()]">
+      <error>java.lang.NullPointerException: Cannot invoke "com.admin.repository.AdminActionRepository.findById(Object)" because "this.actionRepo" is null
+	at com.admin.service.AdminServiceTest.testResolve(AdminServiceTest.java:86)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+</error>
+    </testcase>
+    <testcase name="testGetAllActions" classname="com.admin.service.AdminServiceTest" time="0.001" displayname="testGetAllActions()" uniqueid="[engine:junit-jupiter]/[class:com.admin.service.AdminServiceTest]/[method:testGetAllActions()]">
+      <error>java.lang.NullPointerException: Cannot invoke "com.admin.repository.AdminActionRepository.findAll()" because "this.actionRepo" is null
+	at com.admin.service.AdminServiceTest.testGetAllActions(AdminServiceTest.java:50)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

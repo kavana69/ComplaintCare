@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="notification-service" project="notification-service" tests="10" started="10" failures="0" errors="1" ignored="1">
+  <testsuite name="com.notification.controller.NotificationControllerTest" time="0.235" displayname="NotificationControllerTest" uniqueid="[engine:junit-jupiter]/[class:com.notification.controller.NotificationControllerTest]">
+    <testcase name="testSend" classname="com.notification.controller.NotificationControllerTest" time="0.222" displayname="testSend()" uniqueid="[engine:junit-jupiter]/[class:com.notification.controller.NotificationControllerTest]/[method:testSend()]"/>
+    <testcase name="testGetAll" classname="com.notification.controller.NotificationControllerTest" time="0.012" displayname="testGetAll()" uniqueid="[engine:junit-jupiter]/[class:com.notification.controller.NotificationControllerTest]/[method:testGetAll()]"/>
+  </testsuite>
+  <testsuite name="com.notification.NotificationServiceApplicationTests" time="0.0" displayname="NotificationServiceApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.notification.NotificationServiceApplicationTests]">
+    <testcase name="contextLoads" classname="com.notification.NotificationServiceApplicationTests" time="0.0" ignored="true" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.notification.NotificationServiceApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+  <testsuite name="com.notification.service.NotificationServiceTest" time="0.164" displayname="NotificationServiceTest" uniqueid="[engine:junit-jupiter]/[class:com.notification.service.NotificationServiceTest]">
+    <testcase name="testDeleteNotFound" classname="com.notification.service.NotificationServiceTest" time="0.15" displayname="testDeleteNotFound()" uniqueid="[engine:junit-jupiter]/[class:com.notification.service.NotificationServiceTest]/[method:testDeleteNotFound()]"/>
+    <testcase name="testSendNotification" classname="com.notification.service.NotificationServiceTest" time="0.007" displayname="testSendNotification()" uniqueid="[engine:junit-jupiter]/[class:com.notification.service.NotificationServiceTest]/[method:testSendNotification()]">
+      <error>java.lang.NullPointerException: Cannot invoke "org.springframework.mail.javamail.JavaMailSender.send(org.springframework.mail.SimpleMailMessage)" because "&lt;local3&gt;.mailSender" is null
+	at com.notification.service.NotificationService.sendNotification(NotificationService.java:45)
+	at com.notification.service.NotificationServiceTest.testSendNotification(NotificationServiceTest.java:39)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+</error>
+    </testcase>
+    <testcase name="testDeleteSuccess" classname="com.notification.service.NotificationServiceTest" time="0.003" displayname="testDeleteSuccess()" uniqueid="[engine:junit-jupiter]/[class:com.notification.service.NotificationServiceTest]/[method:testDeleteSuccess()]"/>
+    <testcase name="testSendNotificationNull" classname="com.notification.service.NotificationServiceTest" time="0.001" displayname="testSendNotificationNull()" uniqueid="[engine:junit-jupiter]/[class:com.notification.service.NotificationServiceTest]/[method:testSendNotificationNull()]"/>
+    <testcase name="testGetByEmail" classname="com.notification.service.NotificationServiceTest" time="0.001" displayname="testGetByEmail()" uniqueid="[engine:junit-jupiter]/[class:com.notification.service.NotificationServiceTest]/[method:testGetByEmail()]"/>
+    <testcase name="testGetAllNotifications" classname="com.notification.service.NotificationServiceTest" time="0.001" displayname="testGetAllNotifications()" uniqueid="[engine:junit-jupiter]/[class:com.notification.service.NotificationServiceTest]/[method:testGetAllNotifications()]"/>
+  </testsuite>
+  <testsuite name="com.notification.repository.NotificationRepositoryTest" time="0.002" displayname="NotificationRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.notification.repository.NotificationRepositoryTest]">
+    <testcase name="testSaveAndFind" classname="com.notification.repository.NotificationRepositoryTest" time="0.002" displayname="testSaveAndFind()" uniqueid="[engine:junit-jupiter]/[class:com.notification.repository.NotificationRepositoryTest]/[method:testSaveAndFind()]"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.complaintcare.auth&apos; to &apos;com.auth&apos;&#x0A;- Original project: &apos;auth-service&apos;&#x0A;- Original element: &apos;auth-service/src/main/java/com.complaintcare.auth&apos;&#x0A;- Renamed element: &apos;auth-service/src/main/java/com.auth&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.complaintcare.auth&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.complaintcare.auth" name="com.auth" qualified="false" references="true" stamp="1775211163911" textual="false" version="1.0"/>
+</session>

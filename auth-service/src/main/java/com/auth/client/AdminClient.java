@@ -1,0 +1,15 @@
+package com.auth.client;
+
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import com.auth.dto.AdminDto;
+
+@FeignClient(name = "ADMIN-SERVICE")
+public interface AdminClient {
+
+    @PostMapping("/admin/create")
+    void saveAdmin(@RequestBody AdminDto admin);
+
+}

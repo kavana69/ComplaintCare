@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="auth-service" project="auth-service" tests="32" started="32" failures="1" errors="0" ignored="1">
+  <testsuite name="com.auth.repository.AuthUserRepositoryTest" time="0.532" displayname="AuthUserRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.auth.repository.AuthUserRepositoryTest]">
+    <testcase name="testSaveUser" classname="com.auth.repository.AuthUserRepositoryTest" time="0.424" displayname="testSaveUser()" uniqueid="[engine:junit-jupiter]/[class:com.auth.repository.AuthUserRepositoryTest]/[method:testSaveUser()]"/>
+    <testcase name="testFindByEmail_NotFound" classname="com.auth.repository.AuthUserRepositoryTest" time="0.097" displayname="testFindByEmail_NotFound()" uniqueid="[engine:junit-jupiter]/[class:com.auth.repository.AuthUserRepositoryTest]/[method:testFindByEmail_NotFound()]"/>
+    <testcase name="testFindByEmail" classname="com.auth.repository.AuthUserRepositoryTest" time="0.011" displayname="testFindByEmail()" uniqueid="[engine:junit-jupiter]/[class:com.auth.repository.AuthUserRepositoryTest]/[method:testFindByEmail()]"/>
+  </testsuite>
+  <testsuite name="com.auth.service.AuthServiceTest" time="0.446" displayname="AuthServiceTest" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]">
+    <testcase name="testRegisterUserRole" classname="com.auth.service.AuthServiceTest" time="0.365" displayname="testRegisterUserRole()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testRegisterUserRole()]"/>
+    <testcase name="testRegisterLowerCaseRole" classname="com.auth.service.AuthServiceTest" time="0.003" displayname="testRegisterLowerCaseRole()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testRegisterLowerCaseRole()]"/>
+    <testcase name="testRegisterExistingUser" classname="com.auth.service.AuthServiceTest" time="0.003" displayname="testRegisterExistingUser()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testRegisterExistingUser()]"/>
+    <testcase name="testRegisterUnknownRole" classname="com.auth.service.AuthServiceTest" time="0.002" displayname="testRegisterUnknownRole()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testRegisterUnknownRole()]"/>
+    <testcase name="testUpdatePasswordEncodingCoverage" classname="com.auth.service.AuthServiceTest" time="0.003" displayname="testUpdatePasswordEncodingCoverage()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testUpdatePasswordEncodingCoverage()]"/>
+    <testcase name="testLoginSuccess" classname="com.auth.service.AuthServiceTest" time="0.006" displayname="testLoginSuccess()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testLoginSuccess()]"/>
+    <testcase name="testLoginUserNotFound" classname="com.auth.service.AuthServiceTest" time="0.002" displayname="testLoginUserNotFound()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testLoginUserNotFound()]"/>
+    <testcase name="testRegisterAdminRole" classname="com.auth.service.AuthServiceTest" time="0.002" displayname="testRegisterAdminRole()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testRegisterAdminRole()]"/>
+    <testcase name="testRegisterAdminBranchCoverage" classname="com.auth.service.AuthServiceTest" time="0.002" displayname="testRegisterAdminBranchCoverage()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testRegisterAdminBranchCoverage()]"/>
+    <testcase name="testRegisterUserBranchCoverage" classname="com.auth.service.AuthServiceTest" time="0.002" displayname="testRegisterUserBranchCoverage()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testRegisterUserBranchCoverage()]"/>
+    <testcase name="testUpdatePasswordEncodingVerify" classname="com.auth.service.AuthServiceTest" time="0.002" displayname="testUpdatePasswordEncodingVerify()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testUpdatePasswordEncodingVerify()]"/>
+    <testcase name="testPasswordEncodingCoverage" classname="com.auth.service.AuthServiceTest" time="0.002" displayname="testPasswordEncodingCoverage()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testPasswordEncodingCoverage()]"/>
+    <testcase name="testLoginPasswordMatchBranch" classname="com.auth.service.AuthServiceTest" time="0.001" displayname="testLoginPasswordMatchBranch()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testLoginPasswordMatchBranch()]"/>
+    <testcase name="testControllerConstructor" classname="com.auth.service.AuthServiceTest" time="0.02" displayname="testControllerConstructor()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testControllerConstructor()]"/>
+    <testcase name="testRegisterNullFields" classname="com.auth.service.AuthServiceTest" time="0.012" displayname="testRegisterNullFields()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testRegisterNullFields()]">
+      <failure>
+        <expected>class java.lang.IllegalArgumentException</expected>
+        <actual>class java.lang.IllegalStateException</actual>
+        org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: &lt;java.lang.IllegalArgumentException&gt; but was: &lt;java.lang.IllegalStateException&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at com.auth.service.AuthServiceTest.testRegisterNullFields(AuthServiceTest.java:136)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.lang.IllegalStateException: Name, Email or Password is null
+	at com.auth.service.AuthService.register(AuthService.java:41)
+	at com.auth.service.AuthServiceTest.lambda$1(AuthServiceTest.java:137)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 6 more
+
+
+      </failure>
+    </testcase>
+    <testcase name="testLoginWrongPasswordBranch" classname="com.auth.service.AuthServiceTest" time="0.002" displayname="testLoginWrongPasswordBranch()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testLoginWrongPasswordBranch()]"/>
+    <testcase name="testUpdatePasswordUserNotFound" classname="com.auth.service.AuthServiceTest" time="0.001" displayname="testUpdatePasswordUserNotFound()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testUpdatePasswordUserNotFound()]"/>
+    <testcase name="testLoginInvalidPassword" classname="com.auth.service.AuthServiceTest" time="0.001" displayname="testLoginInvalidPassword()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testLoginInvalidPassword()]"/>
+    <testcase name="testUpdatePasswordSuccess" classname="com.auth.service.AuthServiceTest" time="0.001" displayname="testUpdatePasswordSuccess()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testUpdatePasswordSuccess()]"/>
+  </testsuite>
+  <testsuite name="com.auth.controller.AuthControllerTest" time="0.031" displayname="AuthControllerTest" uniqueid="[engine:junit-jupiter]/[class:com.auth.controller.AuthControllerTest]">
+    <testcase name="testLoginEndpoint" classname="com.auth.controller.AuthControllerTest" time="0.002" displayname="testLoginEndpoint()" uniqueid="[engine:junit-jupiter]/[class:com.auth.controller.AuthControllerTest]/[method:testLoginEndpoint()]"/>
+    <testcase name="testRegisterAdminResponse" classname="com.auth.controller.AuthControllerTest" time="0.019" displayname="testRegisterAdminResponse()" uniqueid="[engine:junit-jupiter]/[class:com.auth.controller.AuthControllerTest]/[method:testRegisterAdminResponse()]"/>
+    <testcase name="testUpdatePasswordEndpoint" classname="com.auth.controller.AuthControllerTest" time="0.001" displayname="testUpdatePasswordEndpoint()" uniqueid="[engine:junit-jupiter]/[class:com.auth.controller.AuthControllerTest]/[method:testUpdatePasswordEndpoint()]"/>
+    <testcase name="testLoginResponseCoverage" classname="com.auth.controller.AuthControllerTest" time="0.001" displayname="testLoginResponseCoverage()" uniqueid="[engine:junit-jupiter]/[class:com.auth.controller.AuthControllerTest]/[method:testLoginResponseCoverage()]"/>
+    <testcase name="testUpdatePasswordResponseCoverage" classname="com.auth.controller.AuthControllerTest" time="0.001" displayname="testUpdatePasswordResponseCoverage()" uniqueid="[engine:junit-jupiter]/[class:com.auth.controller.AuthControllerTest]/[method:testUpdatePasswordResponseCoverage()]"/>
+    <testcase name="testLoginTokenResponse" classname="com.auth.controller.AuthControllerTest" time="0.001" displayname="testLoginTokenResponse()" uniqueid="[engine:junit-jupiter]/[class:com.auth.controller.AuthControllerTest]/[method:testLoginTokenResponse()]"/>
+    <testcase name="testRegisterEndpoint" classname="com.auth.controller.AuthControllerTest" time="0.001" displayname="testRegisterEndpoint()" uniqueid="[engine:junit-jupiter]/[class:com.auth.controller.AuthControllerTest]/[method:testRegisterEndpoint()]"/>
+    <testcase name="testRegisterResponseCoverage" classname="com.auth.controller.AuthControllerTest" time="0.0" displayname="testRegisterResponseCoverage()" uniqueid="[engine:junit-jupiter]/[class:com.auth.controller.AuthControllerTest]/[method:testRegisterResponseCoverage()]"/>
+    <testcase name="testUpdatePasswordResponseBody" classname="com.auth.controller.AuthControllerTest" time="0.001" displayname="testUpdatePasswordResponseBody()" uniqueid="[engine:junit-jupiter]/[class:com.auth.controller.AuthControllerTest]/[method:testUpdatePasswordResponseBody()]"/>
+  </testsuite>
+  <testsuite name="com.auth.AuthServiceApplicationTests" time="0.0" displayname="AuthServiceApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.auth.AuthServiceApplicationTests]">
+    <testcase name="contextLoads" classname="com.auth.AuthServiceApplicationTests" time="0.0" ignored="true" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.auth.AuthServiceApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+</testrun>

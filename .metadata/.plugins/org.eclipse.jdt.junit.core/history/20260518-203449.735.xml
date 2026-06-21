@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="auth-service" project="auth-service" tests="16" started="16" failures="1" errors="1" ignored="1">
+  <testsuite name="com.auth.repository.AuthUserRepositoryTest" time="0.55" displayname="AuthUserRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.auth.repository.AuthUserRepositoryTest]">
+    <testcase name="testSaveUser" classname="com.auth.repository.AuthUserRepositoryTest" time="0.442" displayname="testSaveUser()" uniqueid="[engine:junit-jupiter]/[class:com.auth.repository.AuthUserRepositoryTest]/[method:testSaveUser()]"/>
+    <testcase name="testFindByEmail_NotFound" classname="com.auth.repository.AuthUserRepositoryTest" time="0.097" displayname="testFindByEmail_NotFound()" uniqueid="[engine:junit-jupiter]/[class:com.auth.repository.AuthUserRepositoryTest]/[method:testFindByEmail_NotFound()]"/>
+    <testcase name="testFindByEmail" classname="com.auth.repository.AuthUserRepositoryTest" time="0.01" displayname="testFindByEmail()" uniqueid="[engine:junit-jupiter]/[class:com.auth.repository.AuthUserRepositoryTest]/[method:testFindByEmail()]"/>
+  </testsuite>
+  <testsuite name="com.auth.service.AuthServiceTest" time="0.489" displayname="AuthServiceTest" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]">
+    <testcase name="testRegisterUserRole" classname="com.auth.service.AuthServiceTest" time="0.434" displayname="testRegisterUserRole()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testRegisterUserRole()]"/>
+    <testcase name="testRegisterExistingUser" classname="com.auth.service.AuthServiceTest" time="0.026" displayname="testRegisterExistingUser()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testRegisterExistingUser()]">
+      <error>org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean &amp; maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -&gt; at com.auth.service.AuthServiceTest.testRegisterExistingUser(AuthServiceTest.java:120)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+	at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:192)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+</error>
+    </testcase>
+    <testcase name="testLoginSuccess" classname="com.auth.service.AuthServiceTest" time="0.006" displayname="testLoginSuccess()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testLoginSuccess()]"/>
+    <testcase name="testLoginUserNotFound" classname="com.auth.service.AuthServiceTest" time="0.002" displayname="testLoginUserNotFound()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testLoginUserNotFound()]"/>
+    <testcase name="testRegisterAdminRole" classname="com.auth.service.AuthServiceTest" time="0.002" displayname="testRegisterAdminRole()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testRegisterAdminRole()]"/>
+    <testcase name="testRegisterNullFields" classname="com.auth.service.AuthServiceTest" time="0.008" displayname="testRegisterNullFields()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testRegisterNullFields()]">
+      <failure>
+        <expected>class java.lang.IllegalArgumentException</expected>
+        <actual>class java.lang.IllegalStateException</actual>
+        org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: &lt;java.lang.IllegalArgumentException&gt; but was: &lt;java.lang.IllegalStateException&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at com.auth.service.AuthServiceTest.testRegisterNullFields(AuthServiceTest.java:132)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.lang.IllegalStateException: Name, Email or Password is null
+	at com.auth.service.AuthService.register(AuthService.java:41)
+	at com.auth.service.AuthServiceTest.lambda$1(AuthServiceTest.java:133)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 6 more
+
+
+      </failure>
+    </testcase>
+    <testcase name="testUpdatePasswordUserNotFound" classname="com.auth.service.AuthServiceTest" time="0.002" displayname="testUpdatePasswordUserNotFound()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testUpdatePasswordUserNotFound()]"/>
+    <testcase name="testLoginInvalidPassword" classname="com.auth.service.AuthServiceTest" time="0.002" displayname="testLoginInvalidPassword()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testLoginInvalidPassword()]"/>
+    <testcase name="testUpdatePasswordSuccess" classname="com.auth.service.AuthServiceTest" time="0.001" displayname="testUpdatePasswordSuccess()" uniqueid="[engine:junit-jupiter]/[class:com.auth.service.AuthServiceTest]/[method:testUpdatePasswordSuccess()]"/>
+  </testsuite>
+  <testsuite name="com.auth.controller.AuthControllerTest" time="0.041" displayname="AuthControllerTest" uniqueid="[engine:junit-jupiter]/[class:com.auth.controller.AuthControllerTest]">
+    <testcase name="testLoginEndpoint" classname="com.auth.controller.AuthControllerTest" time="0.022" displayname="testLoginEndpoint()" uniqueid="[engine:junit-jupiter]/[class:com.auth.controller.AuthControllerTest]/[method:testLoginEndpoint()]"/>
+    <testcase name="testUpdatePasswordEndpoint" classname="com.auth.controller.AuthControllerTest" time="0.017" displayname="testUpdatePasswordEndpoint()" uniqueid="[engine:junit-jupiter]/[class:com.auth.controller.AuthControllerTest]/[method:testUpdatePasswordEndpoint()]"/>
+    <testcase name="testRegisterEndpoint" classname="com.auth.controller.AuthControllerTest" time="0.002" displayname="testRegisterEndpoint()" uniqueid="[engine:junit-jupiter]/[class:com.auth.controller.AuthControllerTest]/[method:testRegisterEndpoint()]"/>
+  </testsuite>
+  <testsuite name="com.auth.AuthServiceApplicationTests" time="0.0" displayname="AuthServiceApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.auth.AuthServiceApplicationTests]">
+    <testcase name="contextLoads" classname="com.auth.AuthServiceApplicationTests" time="0.0" ignored="true" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.auth.AuthServiceApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+</testrun>

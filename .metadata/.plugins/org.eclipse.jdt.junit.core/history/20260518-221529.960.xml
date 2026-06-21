@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="user-service" project="user-service" tests="32" started="32" failures="1" errors="1" ignored="1">
+  <testsuite name="com.user.service.UserServiceTest" time="1.031" displayname="UserServiceTest" uniqueid="[engine:junit-jupiter]/[class:com.user.service.UserServiceTest]">
+    <testcase name="testVerifyOtpFalse" classname="com.user.service.UserServiceTest" time="0.948" displayname="testVerifyOtpFalse()" uniqueid="[engine:junit-jupiter]/[class:com.user.service.UserServiceTest]/[method:testVerifyOtpFalse()]"/>
+    <testcase name="testGetAllUsers" classname="com.user.service.UserServiceTest" time="0.025" displayname="testGetAllUsers()" uniqueid="[engine:junit-jupiter]/[class:com.user.service.UserServiceTest]/[method:testGetAllUsers()]"/>
+    <testcase name="testVerifyForgotOtpInvalid" classname="com.user.service.UserServiceTest" time="0.014" displayname="testVerifyForgotOtpInvalid()" uniqueid="[engine:junit-jupiter]/[class:com.user.service.UserServiceTest]/[method:testVerifyForgotOtpInvalid()]"/>
+    <testcase name="testGetUserByEmailSuccess" classname="com.user.service.UserServiceTest" time="0.005" displayname="testGetUserByEmailSuccess()" uniqueid="[engine:junit-jupiter]/[class:com.user.service.UserServiceTest]/[method:testGetUserByEmailSuccess()]"/>
+    <testcase name="testGetUserByEmailNotFound" classname="com.user.service.UserServiceTest" time="0.003" displayname="testGetUserByEmailNotFound()" uniqueid="[engine:junit-jupiter]/[class:com.user.service.UserServiceTest]/[method:testGetUserByEmailNotFound()]"/>
+    <testcase name="testDeleteUserSuccess" classname="com.user.service.UserServiceTest" time="0.009" displayname="testDeleteUserSuccess()" uniqueid="[engine:junit-jupiter]/[class:com.user.service.UserServiceTest]/[method:testDeleteUserSuccess()]"/>
+    <testcase name="testVerifyForgotOtpExpired" classname="com.user.service.UserServiceTest" time="0.002" displayname="testVerifyForgotOtpExpired()" uniqueid="[engine:junit-jupiter]/[class:com.user.service.UserServiceTest]/[method:testVerifyForgotOtpExpired()]"/>
+    <testcase name="testGenerateOtp" classname="com.user.service.UserServiceTest" time="0.001" displayname="testGenerateOtp()" uniqueid="[engine:junit-jupiter]/[class:com.user.service.UserServiceTest]/[method:testGenerateOtp()]"/>
+    <testcase name="testCreateUserEmptyName" classname="com.user.service.UserServiceTest" time="0.002" displayname="testCreateUserEmptyName()" uniqueid="[engine:junit-jupiter]/[class:com.user.service.UserServiceTest]/[method:testCreateUserEmptyName()]"/>
+    <testcase name="testCreateUserSuccess" classname="com.user.service.UserServiceTest" time="0.002" displayname="testCreateUserSuccess()" uniqueid="[engine:junit-jupiter]/[class:com.user.service.UserServiceTest]/[method:testCreateUserSuccess()]"/>
+    <testcase name="testGetUserByIdSuccess" classname="com.user.service.UserServiceTest" time="0.002" displayname="testGetUserByIdSuccess()" uniqueid="[engine:junit-jupiter]/[class:com.user.service.UserServiceTest]/[method:testGetUserByIdSuccess()]"/>
+    <testcase name="testVerifyOtpTrue" classname="com.user.service.UserServiceTest" time="0.002" displayname="testVerifyOtpTrue()" uniqueid="[engine:junit-jupiter]/[class:com.user.service.UserServiceTest]/[method:testVerifyOtpTrue()]"/>
+    <testcase name="testResetPasswordSuccess" classname="com.user.service.UserServiceTest" time="0.003" displayname="testResetPasswordSuccess()" uniqueid="[engine:junit-jupiter]/[class:com.user.service.UserServiceTest]/[method:testResetPasswordSuccess()]"/>
+    <testcase name="testResetPasswordMismatch" classname="com.user.service.UserServiceTest" time="0.001" displayname="testResetPasswordMismatch()" uniqueid="[engine:junit-jupiter]/[class:com.user.service.UserServiceTest]/[method:testResetPasswordMismatch()]"/>
+    <testcase name="testCreateUserEmptyEmail" classname="com.user.service.UserServiceTest" time="0.001" displayname="testCreateUserEmptyEmail()" uniqueid="[engine:junit-jupiter]/[class:com.user.service.UserServiceTest]/[method:testCreateUserEmptyEmail()]"/>
+    <testcase name="testSendForgotPasswordOtpUserNotFound" classname="com.user.service.UserServiceTest" time="0.001" displayname="testSendForgotPasswordOtpUserNotFound()" uniqueid="[engine:junit-jupiter]/[class:com.user.service.UserServiceTest]/[method:testSendForgotPasswordOtpUserNotFound()]"/>
+    <testcase name="testGetUserByIdNotFound" classname="com.user.service.UserServiceTest" time="0.001" displayname="testGetUserByIdNotFound()" uniqueid="[engine:junit-jupiter]/[class:com.user.service.UserServiceTest]/[method:testGetUserByIdNotFound()]"/>
+    <testcase name="testSendForgotPasswordOtpSuccess" classname="com.user.service.UserServiceTest" time="0.001" displayname="testSendForgotPasswordOtpSuccess()" uniqueid="[engine:junit-jupiter]/[class:com.user.service.UserServiceTest]/[method:testSendForgotPasswordOtpSuccess()]"/>
+    <testcase name="testDeleteUserNotFound" classname="com.user.service.UserServiceTest" time="0.001" displayname="testDeleteUserNotFound()" uniqueid="[engine:junit-jupiter]/[class:com.user.service.UserServiceTest]/[method:testDeleteUserNotFound()]"/>
+  </testsuite>
+  <testsuite name="com.user.repository.UserRepositoryTest" time="0.002" displayname="UserRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.user.repository.UserRepositoryTest]">
+    <testcase name="testSaveAndFind" classname="com.user.repository.UserRepositoryTest" time="0.002" displayname="testSaveAndFind()" uniqueid="[engine:junit-jupiter]/[class:com.user.repository.UserRepositoryTest]/[method:testSaveAndFind()]">
+      <error>java.lang.IllegalStateException: Failed to load ApplicationContext for [MergedContextConfiguration@62e9a6cc testClass = com.user.repository.UserRepositoryTest, locations = [], classes = [com.user.UserServiceApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@55f77306 key = [org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcClientAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3181d4de, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1815577b, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@32e5af53, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@34be3d80, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@f1115632, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@5d1a859c, org.springframework.boot.test.context.SpringBootTestAnnotation@f0318916], contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:142)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:98)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	... 17 more
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.&lt;init&gt;(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.&lt;init&gt;(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 38 more
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:143)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:348)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 53 more
+
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="com.user.controller.UserControllerTest" time="0.099" displayname="UserControllerTest" uniqueid="[engine:junit-jupiter]/[class:com.user.controller.UserControllerTest]">
+    <testcase name="testVerifyAndRegister" classname="com.user.controller.UserControllerTest" time="0.056" displayname="testVerifyAndRegister()" uniqueid="[engine:junit-jupiter]/[class:com.user.controller.UserControllerTest]/[method:testVerifyAndRegister()]"/>
+    <testcase name="testControllerTestEndpoint" classname="com.user.controller.UserControllerTest" time="0.007" displayname="testControllerTestEndpoint()" uniqueid="[engine:junit-jupiter]/[class:com.user.controller.UserControllerTest]/[method:testControllerTestEndpoint()]">
+      <failure>
+        <expected>User Service Working</expected>
+        <actual>User Service Working </actual>
+        org.opentest4j.AssertionFailedError: expected: &lt;User Service Working&gt; but was: &lt;User Service Working &gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at com.user.controller.UserControllerTest.testControllerTestEndpoint(UserControllerTest.java:216)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+
+      </failure>
+    </testcase>
+    <testcase name="testGetAllUsers" classname="com.user.controller.UserControllerTest" time="0.002" displayname="testGetAllUsers()" uniqueid="[engine:junit-jupiter]/[class:com.user.controller.UserControllerTest]/[method:testGetAllUsers()]"/>
+    <testcase name="testGetById" classname="com.user.controller.UserControllerTest" time="0.001" displayname="testGetById()" uniqueid="[engine:junit-jupiter]/[class:com.user.controller.UserControllerTest]/[method:testGetById()]"/>
+    <testcase name="testForgotPasswordOtp" classname="com.user.controller.UserControllerTest" time="0.02" displayname="testForgotPasswordOtp()" uniqueid="[engine:junit-jupiter]/[class:com.user.controller.UserControllerTest]/[method:testForgotPasswordOtp()]"/>
+    <testcase name="testGetByEmail" classname="com.user.controller.UserControllerTest" time="0.001" displayname="testGetByEmail()" uniqueid="[engine:junit-jupiter]/[class:com.user.controller.UserControllerTest]/[method:testGetByEmail()]"/>
+    <testcase name="testCreateUser" classname="com.user.controller.UserControllerTest" time="0.001" displayname="testCreateUser()" uniqueid="[engine:junit-jupiter]/[class:com.user.controller.UserControllerTest]/[method:testCreateUser()]"/>
+    <testcase name="testDeleteUser" classname="com.user.controller.UserControllerTest" time="0.002" displayname="testDeleteUser()" uniqueid="[engine:junit-jupiter]/[class:com.user.controller.UserControllerTest]/[method:testDeleteUser()]"/>
+    <testcase name="testSendOtp" classname="com.user.controller.UserControllerTest" time="0.001" displayname="testSendOtp()" uniqueid="[engine:junit-jupiter]/[class:com.user.controller.UserControllerTest]/[method:testSendOtp()]"/>
+    <testcase name="testResetPassword" classname="com.user.controller.UserControllerTest" time="0.002" displayname="testResetPassword()" uniqueid="[engine:junit-jupiter]/[class:com.user.controller.UserControllerTest]/[method:testResetPassword()]"/>
+    <testcase name="testVerifyForgotOtp" classname="com.user.controller.UserControllerTest" time="0.001" displayname="testVerifyForgotOtp()" uniqueid="[engine:junit-jupiter]/[class:com.user.controller.UserControllerTest]/[method:testVerifyForgotOtp()]"/>
+  </testsuite>
+  <testsuite name="com.user.UserServiceApplicationTests" time="0.0" displayname="UserServiceApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.user.UserServiceApplicationTests]">
+    <testcase name="contextLoads" classname="com.user.UserServiceApplicationTests" time="0.0" ignored="true" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.user.UserServiceApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+</testrun>

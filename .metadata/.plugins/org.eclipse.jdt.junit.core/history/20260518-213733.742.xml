@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="complaint-service" project="complaint-service" tests="46" started="46" failures="0" errors="2" ignored="1">
+  <testsuite name="com.complaint.repository.ComplaintRepositoryTest" time="0.494" displayname="ComplaintRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.complaint.repository.ComplaintRepositoryTest]">
+    <testcase name="testSaveAndFind" classname="com.complaint.repository.ComplaintRepositoryTest" time="0.494" displayname="testSaveAndFind()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.repository.ComplaintRepositoryTest]/[method:testSaveAndFind()]"/>
+  </testsuite>
+  <testsuite name="com.complaint.ComplaintServiceApplicationTests" time="0.0" displayname="ComplaintServiceApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.complaint.ComplaintServiceApplicationTests]">
+    <testcase name="contextLoads" classname="com.complaint.ComplaintServiceApplicationTests" time="0.0" ignored="true" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.ComplaintServiceApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+  <testsuite name="com.complaint.service.ComplaintServiceTest" time="0.464" displayname="ComplaintServiceTest" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]">
+    <testcase name="testCreateComplaintUserNotFound" classname="com.complaint.service.ComplaintServiceTest" time="0.324" displayname="testCreateComplaintUserNotFound()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testCreateComplaintUserNotFound()]"/>
+    <testcase name="testUpdateStatusInvalid" classname="com.complaint.service.ComplaintServiceTest" time="0.004" displayname="testUpdateStatusInvalid()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testUpdateStatusInvalid()]"/>
+    <testcase name="testAssignToAdminNotificationFailure" classname="com.complaint.service.ComplaintServiceTest" time="0.057" displayname="testAssignToAdminNotificationFailure()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testAssignToAdminNotificationFailure()]"/>
+    <testcase name="testDeleteComplaintNotFound" classname="com.complaint.service.ComplaintServiceTest" time="0.002" displayname="testDeleteComplaintNotFound()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testDeleteComplaintNotFound()]"/>
+    <testcase name="testGetComplaintByIdNotFound" classname="com.complaint.service.ComplaintServiceTest" time="0.002" displayname="testGetComplaintByIdNotFound()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testGetComplaintByIdNotFound()]"/>
+    <testcase name="testGetByUserId" classname="com.complaint.service.ComplaintServiceTest" time="0.002" displayname="testGetByUserId()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testGetByUserId()]"/>
+    <testcase name="testGetComplaintById" classname="com.complaint.service.ComplaintServiceTest" time="0.001" displayname="testGetComplaintById()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testGetComplaintById()]"/>
+    <testcase name="testCreateComplaintNotificationFailure" classname="com.complaint.service.ComplaintServiceTest" time="0.005" displayname="testCreateComplaintNotificationFailure()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testCreateComplaintNotificationFailure()]"/>
+    <testcase name="testAssignToAdmin" classname="com.complaint.service.ComplaintServiceTest" time="0.003" displayname="testAssignToAdmin()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testAssignToAdmin()]"/>
+    <testcase name="testAssignAdminNotificationException" classname="com.complaint.service.ComplaintServiceTest" time="0.003" displayname="testAssignAdminNotificationException()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testAssignAdminNotificationException()]"/>
+    <testcase name="testCreateComplaintNotificationException" classname="com.complaint.service.ComplaintServiceTest" time="0.003" displayname="testCreateComplaintNotificationException()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testCreateComplaintNotificationException()]"/>
+    <testcase name="testUpdateComplaintNull" classname="com.complaint.service.ComplaintServiceTest" time="0.001" displayname="testUpdateComplaintNull()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testUpdateComplaintNull()]"/>
+    <testcase name="testDeleteComplaint" classname="com.complaint.service.ComplaintServiceTest" time="0.006" displayname="testDeleteComplaint()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testDeleteComplaint()]"/>
+    <testcase name="testUpdateStatusNotFound" classname="com.complaint.service.ComplaintServiceTest" time="0.002" displayname="testUpdateStatusNotFound()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testUpdateStatusNotFound()]"/>
+    <testcase name="testGetByEmailEmptyResult" classname="com.complaint.service.ComplaintServiceTest" time="0.004" displayname="testGetByEmailEmptyResult()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testGetByEmailEmptyResult()]"/>
+    <testcase name="testUpdateStatusNotificationException" classname="com.complaint.service.ComplaintServiceTest" time="0.004" displayname="testUpdateStatusNotificationException()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testUpdateStatusNotificationException()]"/>
+    <testcase name="testUpdateComplaint" classname="com.complaint.service.ComplaintServiceTest" time="0.002" displayname="testUpdateComplaint()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testUpdateComplaint()]"/>
+    <testcase name="testUpdateStatusLowerCase" classname="com.complaint.service.ComplaintServiceTest" time="0.008" displayname="testUpdateStatusLowerCase()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testUpdateStatusLowerCase()]">
+      <error>java.lang.IllegalArgumentException: Invalid status
+	at com.complaint.service.ComplaintService.updateStatus(ComplaintService.java:142)
+	at com.complaint.service.ComplaintServiceTest.testUpdateStatusLowerCase(ComplaintServiceTest.java:445)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+</error>
+    </testcase>
+    <testcase name="testUpdateStatus" classname="com.complaint.service.ComplaintServiceTest" time="0.002" displayname="testUpdateStatus()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testUpdateStatus()]"/>
+    <testcase name="testAssignAdminNotFound" classname="com.complaint.service.ComplaintServiceTest" time="0.002" displayname="testAssignAdminNotFound()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testAssignAdminNotFound()]"/>
+    <testcase name="testGetByEmail" classname="com.complaint.service.ComplaintServiceTest" time="0.001" displayname="testGetByEmail()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testGetByEmail()]"/>
+    <testcase name="testGetAllComplaints" classname="com.complaint.service.ComplaintServiceTest" time="0.001" displayname="testGetAllComplaints()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testGetAllComplaints()]"/>
+    <testcase name="testCreateComplaint" classname="com.complaint.service.ComplaintServiceTest" time="0.002" displayname="testCreateComplaint()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testCreateComplaint()]"/>
+    <testcase name="testGetByEmailEmpty" classname="com.complaint.service.ComplaintServiceTest" time="0.002" displayname="testGetByEmailEmpty()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testGetByEmailEmpty()]"/>
+    <testcase name="testUpdateStatusNotificationFailure" classname="com.complaint.service.ComplaintServiceTest" time="0.003" displayname="testUpdateStatusNotificationFailure()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.service.ComplaintServiceTest]/[method:testUpdateStatusNotificationFailure()]">
+      <error>java.lang.IllegalArgumentException: Invalid status
+	at com.complaint.service.ComplaintService.updateStatus(ComplaintService.java:142)
+	at com.complaint.service.ComplaintServiceTest.testUpdateStatusNotificationFailure(ComplaintServiceTest.java:405)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="com.complaint.controller.ComplaintControllerTest" time="0.082" displayname="ComplaintControllerTest" uniqueid="[engine:junit-jupiter]/[class:com.complaint.controller.ComplaintControllerTest]">
+    <testcase name="testGetByEmailAnotherMail" classname="com.complaint.controller.ComplaintControllerTest" time="0.056" displayname="testGetByEmailAnotherMail()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.controller.ComplaintControllerTest]/[method:testGetByEmailAnotherMail()]"/>
+    <testcase name="testCreateComplaintInvalidToken" classname="com.complaint.controller.ComplaintControllerTest" time="0.001" displayname="testCreateComplaintInvalidToken()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.controller.ComplaintControllerTest]/[method:testCreateComplaintInvalidToken()]"/>
+    <testcase name="testGetByUserEmpty" classname="com.complaint.controller.ComplaintControllerTest" time="0.001" displayname="testGetByUserEmpty()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.controller.ComplaintControllerTest]/[method:testGetByUserEmpty()]"/>
+    <testcase name="testGetAllEmpty" classname="com.complaint.controller.ComplaintControllerTest" time="0.001" displayname="testGetAllEmpty()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.controller.ComplaintControllerTest]/[method:testGetAllEmpty()]"/>
+    <testcase name="testUpdateStatusClosed" classname="com.complaint.controller.ComplaintControllerTest" time="0.001" displayname="testUpdateStatusClosed()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.controller.ComplaintControllerTest]/[method:testUpdateStatusClosed()]"/>
+    <testcase name="testDeleteComplaint" classname="com.complaint.controller.ComplaintControllerTest" time="0.001" displayname="testDeleteComplaint()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.controller.ComplaintControllerTest]/[method:testDeleteComplaint()]"/>
+    <testcase name="testGetByUserAnotherId" classname="com.complaint.controller.ComplaintControllerTest" time="0.002" displayname="testGetByUserAnotherId()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.controller.ComplaintControllerTest]/[method:testGetByUserAnotherId()]"/>
+    <testcase name="testGetById" classname="com.complaint.controller.ComplaintControllerTest" time="0.001" displayname="testGetById()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.controller.ComplaintControllerTest]/[method:testGetById()]"/>
+    <testcase name="testUpdateStatus" classname="com.complaint.controller.ComplaintControllerTest" time="0.001" displayname="testUpdateStatus()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.controller.ComplaintControllerTest]/[method:testUpdateStatus()]"/>
+    <testcase name="testGetByEmail" classname="com.complaint.controller.ComplaintControllerTest" time="0.001" displayname="testGetByEmail()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.controller.ComplaintControllerTest]/[method:testGetByEmail()]"/>
+    <testcase name="testGetByUser" classname="com.complaint.controller.ComplaintControllerTest" time="0.001" displayname="testGetByUser()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.controller.ComplaintControllerTest]/[method:testGetByUser()]"/>
+    <testcase name="testAssignAdmin" classname="com.complaint.controller.ComplaintControllerTest" time="0.001" displayname="testAssignAdmin()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.controller.ComplaintControllerTest]/[method:testAssignAdmin()]"/>
+    <testcase name="testCreateComplaint" classname="com.complaint.controller.ComplaintControllerTest" time="0.002" displayname="testCreateComplaint()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.controller.ComplaintControllerTest]/[method:testCreateComplaint()]"/>
+    <testcase name="testGetAll" classname="com.complaint.controller.ComplaintControllerTest" time="0.001" displayname="testGetAll()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.controller.ComplaintControllerTest]/[method:testGetAll()]"/>
+    <testcase name="testCreateComplaintNullToken" classname="com.complaint.controller.ComplaintControllerTest" time="0.001" displayname="testCreateComplaintNullToken()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.controller.ComplaintControllerTest]/[method:testCreateComplaintNullToken()]"/>
+    <testcase name="testUpdateStatusResolved" classname="com.complaint.controller.ComplaintControllerTest" time="0.002" displayname="testUpdateStatusResolved()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.controller.ComplaintControllerTest]/[method:testUpdateStatusResolved()]"/>
+    <testcase name="testAssignEndpointDifferentAdmin" classname="com.complaint.controller.ComplaintControllerTest" time="0.002" displayname="testAssignEndpointDifferentAdmin()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.controller.ComplaintControllerTest]/[method:testAssignEndpointDifferentAdmin()]"/>
+    <testcase name="testGetByEmailEmpty" classname="com.complaint.controller.ComplaintControllerTest" time="0.001" displayname="testGetByEmailEmpty()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.controller.ComplaintControllerTest]/[method:testGetByEmailEmpty()]"/>
+    <testcase name="testGetAllMultipleComplaints" classname="com.complaint.controller.ComplaintControllerTest" time="0.001" displayname="testGetAllMultipleComplaints()" uniqueid="[engine:junit-jupiter]/[class:com.complaint.controller.ComplaintControllerTest]/[method:testGetAllMultipleComplaints()]"/>
+  </testsuite>
+</testrun>
