@@ -1,0 +1,133 @@
+.admin-settings-container {
+  padding: 30px;
+}
+
+.admin-settings-container h2 {
+  color: #4b3ff2;
+  margin-bottom: 20px;
+}
+
+.settings-card {
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+/* TOGGLE SWITCH */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 58px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #d1d5db;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background: linear-gradient(135deg, #5a4bff, #7c4dff);
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(28px);
+}
+
+/* BUTTONS */
+
+.reset-btn {
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.logout-btn {
+  background: linear-gradient(135deg, #5a4bff, #7c4dff);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.reset-btn:hover,
+.logout-btn:hover {
+  opacity: 0.9;
+}
+
+/* DARK MODE */
+
+body.dark-mode {
+  background: #121212;
+  color: white;
+}
+
+body.dark-mode .admin-main,
+body.dark-mode .admin-content,
+body.dark-mode .settings-card,
+body.dark-mode .home-container,
+body.dark-mode .chart-container,
+body.dark-mode table {
+  background: #1e1e1e !important;
+  color: white !important;
+}
+
+body.dark-mode .stat-card,
+body.dark-mode .recent-card,
+body.dark-mode .chart-card {
+  background: #242424 !important;
+  color: white !important;
+}
+
+body.dark-mode th,
+body.dark-mode td {
+  background: #242424 !important;
+  color: white !important;
+}
+
+body.dark-mode .setting-item {
+  border-bottom: 1px solid #333;
+}

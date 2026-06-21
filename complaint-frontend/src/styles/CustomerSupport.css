@@ -1,0 +1,57 @@
+.support-container {
+  padding: 30px;
+}
+
+.support-container h2 {
+  color: #5b3df5;
+  margin-bottom: 20px;
+}
+
+.chat-box {
+  height: 400px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.user-message {
+  background: #5b3df5;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: fit-content;
+  margin-left: auto;
+}
+
+.bot-message {
+  background: #f1f1f1;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.input-area {
+  display: flex;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.input-area button {
+  background: #5b3df5;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}

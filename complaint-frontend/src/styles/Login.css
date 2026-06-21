@@ -1,0 +1,144 @@
+/* PAGE SPLIT */
+.login-page {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* LEFT SIDE */
+.login-left {
+  width: 50%;
+  position: relative;
+}
+
+/* IMAGE */
+.login-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DARK OVERLAY FOR TEXT VISIBILITY */
+.login-left::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* TEXT ON IMAGE */
+.login-overlay {
+  position: absolute;
+  top: 40%;
+  left: 40px;
+  color: white;
+  z-index: 2;
+}
+
+.login-overlay h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.login-overlay p {
+  margin-top: 10px;
+  font-size: 26px;
+  color: #e0e0e0;
+}
+
+/* RIGHT SIDE */
+.login-right {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #eae9ed, #f2f5f5);
+}
+
+/* CARD */
+.login-card {
+  background: white;
+  padding: 30px;
+  margin: auto;
+  border-radius: 10px;
+  width: 320px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* INPUTS */
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+/* BUTTON */
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: linear-gradient(to right, #653cc3, #7e7ad9);
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.login-card button:hover {
+  opacity: 0.9;
+}
+
+/* LINK */
+.login-link {
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+body, html, #root {
+  height: 100%;
+  margin: 0;
+}
+.left-bg-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.login-left{
+    position:relative;
+    overflow:hidden;
+}
+
+.overlay-content{
+    position:absolute;
+    top:50%;
+    left:50px;
+    transform:translateY(-50%);
+    color:white;
+    z-index:2;
+}
+
+.overlay-content h1{
+    font-size:52px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.overlay-content p{
+    font-size:22px;
+    width:70%;
+    line-height:1.5;
+}

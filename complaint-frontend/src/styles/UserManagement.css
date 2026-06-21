@@ -1,0 +1,74 @@
+.user-management-container {
+    padding: 20px;
+}
+
+.user-management-container h2 {
+    margin-bottom: 20px;
+    color: #4b3df5;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.user-table th,
+.user-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.user-table th {
+    background: #4b3df5;
+    color: white;
+}
+
+.block-btn,
+.enable-btn,
+.delete-btn {
+    border: none;
+    padding: 8px 14px;
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+}
+
+.block-btn {
+    background: orange;
+}
+
+.enable-btn {
+    background: green;
+}
+
+.delete-btn {
+    background: red;
+}
+.user-filters {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 15px;
+}
+
+.role-filter {
+    width: 200px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 15px;
+}

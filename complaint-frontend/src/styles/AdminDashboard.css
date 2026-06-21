@@ -1,0 +1,163 @@
+.admin-container{
+    display:flex;
+    min-height:100vh;
+    background:#f6f4ff;
+    font-family:Arial, sans-serif;
+}
+
+/* SIDEBAR */
+
+.admin-sidebar{
+    width:240px;
+    background:linear-gradient(to bottom,#8b7dff,#b8a9ff);
+    color:white;
+    padding:30px 20px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    box-shadow:2px 0 10px rgba(0,0,0,0.1);
+}
+
+.admin-sidebar h2{
+    text-align:center;
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+.admin-sidebar a{
+    text-decoration:none;
+    color:white;
+    padding:14px 18px;
+    border-radius:10px;
+    transition:0.3s;
+    font-size:16px;
+}
+
+.admin-sidebar a:hover{
+    background:white;
+    color:#6f55ff;
+}
+
+/* MAIN */
+
+.admin-main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+/* TOPBAR */
+
+.admin-topbar{
+    background:white;
+    padding:20px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.admin-topbar h1{
+    color:#6f55ff;
+    font-size:30px;
+}
+
+.admin-profile{
+    background:#ede8ff;
+    color:#6f55ff;
+    padding:10px 18px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+/* CONTENT */
+
+.admin-content{
+    padding:30px;
+}
+/* TABLE */
+
+.complaints-table{
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.complaints-table th{
+  background: #f3eeff;
+  color: #5b3df5;
+  padding: 14px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.complaints-table td{
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  font-size: 14px;
+  color: #444;
+}
+
+.complaints-table tr:hover{
+  background: #faf8ff;
+}
+
+/* STATUS BADGES */
+
+.status-badge{
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 100px;
+}
+
+/* OPEN */
+
+.status-badge.OPEN{
+  background: #f1a430;
+}
+
+/* ASSIGNED */
+
+.status-badge.ASSIGNED{
+  background: #78bdf6;
+}
+
+/* IN PROGRESS */
+
+.status-badge.INPROGRESS{
+  background: #d373e4;
+}
+
+/* RESOLVED */
+
+.status-badge.RESOLVED{
+  background: #4acf53;
+}
+.topbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+
+    position: absolute;
+    top: 25px;
+    right: 30px;
+}
+
+.profile-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.notification-icon {
+    font-size: 30px;
+    cursor: pointer;
+}

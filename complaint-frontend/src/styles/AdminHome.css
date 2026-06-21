@@ -1,0 +1,161 @@
+.admin-home {
+  padding: 30px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+/* TOPBAR */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.topbar h1 {
+  color: #4f46e5;
+}
+
+.admin-profile {
+  background: #ede9fe;
+  color: #4f46e5;
+  padding: 12px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  position: relative;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: white;
+  width: 240px;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+.profile-dropdown p {
+  margin-bottom: 12px;
+  color: #374151;
+}
+
+/* WELCOME */
+
+.welcome-banner {
+  background: linear-gradient(135deg, #4f46e5, #8b5cf6);
+  padding: 40px;
+  border-radius: 22px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.welcome-banner h2 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+/* STATS */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 22px;
+  margin-bottom: 35px;
+}
+
+.stat-card {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.stat-card h3 {
+  color: #4f46e5;
+  margin-bottom: 15px;
+}
+
+.stat-card p {
+  font-size: 38px;
+  font-weight: bold;
+}
+
+
+
+/* RECENT TABLE */
+
+.recent-section {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  margin-bottom: 35px;
+}
+
+.recent-section h2 {
+  margin-bottom: 20px;
+  color: #374151;
+}
+
+.recent-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.recent-table th,
+.recent-table td {
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.recent-table th {
+  background: #f3f4f6;
+}
+.filter-bar {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 250px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 15px;
+}
+
+.status-filter {
+  min-width: 220px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.search-input:focus,
+.status-filter:focus {
+  border-color: #4b3ff2;
+}
+
+/* DARK MODE */
+
+body.dark-mode .search-input,
+body.dark-mode .status-filter {
+  background: #2b2b2b;
+  color: white;
+  border: 1px solid #444;
+}
+
+
